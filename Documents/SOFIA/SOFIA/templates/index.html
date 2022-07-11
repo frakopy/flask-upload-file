@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <h1>Sofia - Modulo de calidad de datos</h1>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+
+            <div class="col-md-1" style="padding:60px 60px;">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <div class="custom-file">
+                        <input type="file" id="uploadFile" name="uploadFile" class="custom-file-input" accept=".xml">
+                        {{message_text}}
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-sm">Enviar Archivo</button>
+                    </div>   
+                </form><br>
+                       <form action="/generarreporte" >
+                           <div><button type="submit" id="Generar_Reporte" class="btn btn-primary btn-sm">Generar Reporte</button></div>
+                       </form>
+                       
+            </div>
+        </div>        
+    </div>
+
+
+
+                <script src="/static/scripts/jquery-1.10.2.js"></script>
+                <script src="/static/scripts/bootstrap.js"></script>
+                <script src="/static/scripts/respond.js"></script>
+                {% block scripts %}{% endblock %}
+
+</body>
+</html>
